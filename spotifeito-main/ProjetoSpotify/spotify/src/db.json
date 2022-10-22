@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "Email": "Public-playlist",
+      "PlayLists": [
+                "{ id: '01', nome: 'Sertanejo Universitário', imagem: 'sertanejo', musicas: [[Happy, 'Happy'], [Party, 'Party'], [Dance, 'Dance']] }",
+                "{ id: '02', nome: 'Rock', imagem: 'rock', musicas: [[Party, 'Party']] }",
+                "{ id: '03', nome: 'Samba', imagem: 'samba', musicas: [[Happy, 'Happy'], [Party, 'Party']] }",
+                "{ id: '04', nome: 'Axe', imagem: 'axe', musicas: [[Party, 'Party'], [Dance, 'Dance'], [Happy, 'Happy'], [Happy, 'Happy']] }",
+                "{ id: '05', nome: 'Pagode', imagem: 'pagode', musicas: [[Happy, 'Happy'], [Dance, 'Dance']] }",
+                "{ id: '06', nome: 'Forró', imagem: 'forro', musicas: [[Party, 'Party'], [Dance, 'Dance']] }"],
+      "id":"0000"
+    },
+    {
+      "email": "exemplo@mail.com",
+      "username": "exemplo",
+      "password": "1234",
+      "DataNasc": "01/01/1901",
+      "genero": "nãoAPlica",
+      "PlayLists": [],
+      "id": "0dT1CX"
+    },
+    {
+      "Email": "g@mail.com",
+      "Username": "gilb",
+      "Password": "1234",
+      "DataNasc": "2022-10-20",
+      "Genero": "Masculino",
+      "PlayLists": [],
+      "id": "0dTXgyt"
+    },
+    {
+      "Email": "ex@mail.com",
+      "Username": "Exemplo2",
+      "Password": "1234",
+      "DataNasc": "2022-10-20",
+      "Genero": "Feminino",
+      "PlayLists": [],
+      "id": "T_XjCX8"
+    },
+    {
+      "Email": "novo@novo.com",
+      "Username": "oi",
+      "Password": "1234",
+      "DataNasc": "2022-10-20",
+      "Genero": "NaoBinario",
+      "PlayLists": [],
+      "id": "UUOarXU"
+    },
+    {
+      "Email": "Gilberto@mail.com",
+      "Username": "Gilberto",
+      "Password": "1234",
+      "DataNasc": "2022-11-02",
+      "Genero": "Masculino",
+      "PlayLists": [
+        "{ id: '01', nome: 'Sertanejo Universitário', imagem: 'sertanejo', musicas: [[Happy, 'Happy'], [Party, 'Party'], [Dance, 'Dance']] }"
+      ],
+      "id": "8y2nJs3"
+    }
+  ]
+}
