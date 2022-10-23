@@ -5,9 +5,21 @@ import {BiSearch, BiLibrary, BiHeartSquare} from 'react-icons/bi'
 import {RiAddBoxFill, RiHeart3Fill} from 'react-icons/ri'
 import { FaQuestion } from "react-icons/fa";
 import {BsQuestionLg, BsQuestion} from 'react-icons/bs'
+import { useState, useEffect } from 'react'
 
 const Sidebar = () =>{
 
+    const [user, setUser] = useState({})
+    const [refresh, setRefresh] = useState(false)
+    const [modal, setModal] = useState(false)
+    useEffect(()=>{
+        setRefresh(false)
+        const loadData = async() =>{
+            await setUser(JSON.parse(sessionStorage.getItem('usuarioLogado')))
+        };
+        loadData();
+        setModal(false)
+      },[refresh])
     return(
         <div className="sidebar-box">
             <img src={Logo}></img>
@@ -18,11 +30,14 @@ const Sidebar = () =>{
                 </span>
 
                 <span title='Buscar' className='link-faq'>
-                <BiSearch/>Buscar    
+                <BiSearch/><Link className='link-faq' to="/search" >Buscar   </Link> 
                 </span>
 
                 <span title='Biblioteca' className='link-faq'>
-                <BiLibrary/>Sua Biblioteca    
+                {user ? 
+                <div><BiLibrary/><Link className='link-faq' to="/collection" >Sua Biblioteca </Link></div>
+                :
+                <div><BiLibrary/>Sua Biblioteca</div>}    
                 </span>
 
                 <span title='FAQ'>

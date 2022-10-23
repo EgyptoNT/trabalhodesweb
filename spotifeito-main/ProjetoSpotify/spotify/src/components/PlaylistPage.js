@@ -14,29 +14,26 @@ import samba from '../asstes/samba.jpg'
 import sertanejo from '../asstes/sertanejo.jpg'
 import { Link, useNavigate } from 'react-router-dom';
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import axios from "axios";
 //import {ReactAudioPlayer} from 'react-audio-player';
 
 function Playlist() {
-  const [playlists, setPlaylists] = useState([
-  { id: '01', nome: 'Sertanejo Universitário', imagem: 'sertanejo', musicas: [[Happy, 'Happy'], [Party, 'Party'], [Dance, 'Dance']] },
-  { id: '02', nome: 'Rock', imagem: 'rock', musicas: [[Party, 'Party']] },
-  { id: '03', nome: 'Samba', imagem: 'samba', musicas: [[Happy, 'Happy'], [Party, 'Party']] },
-  { id: '04', nome: 'Axe', imagem: 'axe', musicas: [[Party, 'Party'], [Dance, 'Dance'], [Happy, 'Happy'], [Happy, 'Happy']] },
-  { id: '05', nome: 'Pagode', imagem: 'pagode', musicas: [[Happy, 'Happy'], [Dance, 'Dance']] },
-  { id: '06', nome: 'Forró', imagem: 'forro', musicas: [[Party, 'Party'], [Dance, 'Dance']] },
-]);
-  const [playlist, setPlaylist] = useState({ id: '02', nome: 'Rock', imagem: 'rock', musicas: [[Party, 'Party']] } );
+  const [playlists, setPlaylists] = useState([]);
+  const [playlist, setPlaylist] = useState({ id: '02', nome: 'Rock', imagem: 'rock', musicas: [[Party, 'Party']] });
+  const [loading, setLoading] = useState(false)
   const { id } = useParams();
   useEffect(() => {
-    //const loadData = async() =>{
-    //setPlaylists([
-
-
-    setPlaylist(playlists.find(e => { return e.id == id.toString() }));
-    console.log(playlists.find(e => { return e.id == id.toString() }))
-
-    //};
-    //loadData();
+    setLoading(true)
+    const loadData = async () => {
+      await axios.get(`http://localhost:3001/users?Email=Public-playlist`).then(
+              (res) => {
+                  const usuario = res.data[0]
+                  //console.log(usuario.PlayLists.find(e => { return e.id == id.toString() }))
+                  setPlaylist(usuario.PlayLists.find(e => { return e.id == id.toString() }))
+              })
+              setLoading(false)
+    }
+    loadData();
   }, [])
 
   const handleImg = () => {
@@ -62,8 +59,12 @@ function Playlist() {
   }
 
   return (
-    <div className='playlist-id'>
-      <div className='back-buttons'>
+    <div>
+      {playlist == undefined ? 
+      <div><p>Carregando...</p></div>
+      :
+        <div className='playlist-id'>
+          <div className='back-buttons'>
         <Link to={`/`}><div className='back-button' ><FaChevronLeft /></div></Link>
         <div className='forward-button' ><FaChevronRight /></div>
       </div>
@@ -76,13 +77,16 @@ function Playlist() {
       </div>
       <div className='playlist-songs'>
         {playlist.musicas.map((musica) => (<div className='playlist-main'>
-          <p>{musica[1]}</p>
-          <ReactAudioPlayer
-            src={musica[0]}
-            controls
-          />
-        </div>))}
+            <p>{musica}</p>
+            <ReactAudioPlayer
+              src={musica}
+              controls
+            />
+          </div>))} 
       </div>
+        </div>
+      }
+      
 
     </div>
   );

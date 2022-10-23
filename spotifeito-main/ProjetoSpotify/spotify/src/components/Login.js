@@ -33,7 +33,7 @@ const Login = () => {
                 const usuario = res.data[0]
 
                 if(usuario && usuario.Password == password){
-                    sessionStorage.setItem('usuarioLogado', usuario)
+                    sessionStorage.setItem('usuarioLogado', JSON.stringify(usuario))
                     navigate('/')
                 }else{
                     console.log('Senha incorreta')

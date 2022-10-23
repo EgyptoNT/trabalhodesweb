@@ -3,20 +3,80 @@
     {
       "Email": "Public-playlist",
       "PlayLists": [
-                "{ id: '01', nome: 'Sertanejo Universitário', imagem: 'sertanejo', musicas: [[Happy, 'Happy'], [Party, 'Party'], [Dance, 'Dance']] }",
-                "{ id: '02', nome: 'Rock', imagem: 'rock', musicas: [[Party, 'Party']] }",
-                "{ id: '03', nome: 'Samba', imagem: 'samba', musicas: [[Happy, 'Happy'], [Party, 'Party']] }",
-                "{ id: '04', nome: 'Axe', imagem: 'axe', musicas: [[Party, 'Party'], [Dance, 'Dance'], [Happy, 'Happy'], [Happy, 'Happy']] }",
-                "{ id: '05', nome: 'Pagode', imagem: 'pagode', musicas: [[Happy, 'Happy'], [Dance, 'Dance']] }",
-                "{ id: '06', nome: 'Forró', imagem: 'forro', musicas: [[Party, 'Party'], [Dance, 'Dance']] }"],
-      "id":"0000"
+        {
+          "id": "01",
+          "nome": "Sertanejo Universitário",
+          "imagem": "sertanejo",
+          "musicas": [
+            "Happy",
+            "Dance",
+            "Party"
+          ]
+        },
+        {
+          "id": "02",
+          "nome": "Rock",
+          "imagem": "rock",
+          "musicas": [
+            "Party"
+          ]
+        },
+        {
+          "id": "03",
+          "nome": "Samba",
+          "imagem": "samba",
+          "musicas": [
+            "Happy",
+            "Party"
+          ]
+        },
+        {
+          "id": "04",
+          "nome": "Axe",
+          "imagem": "axe",
+          "musicas": [
+            "Happy",
+            "Party",
+            "Dance",
+            "Party"
+          ]
+        },
+        {
+          "id": "05",
+          "nome": "Pagode",
+          "imagem": "pagode",
+          "musicas": [
+            "Happy",
+            "Dance"
+          ]
+        },
+        {
+          "id": "06",
+          "nome": "Forró",
+          "imagem": "forro",
+          "musicas": [
+            "Party",
+            "Dance"
+          ]
+        }
+      ],
+      "id": "0000"
     },
     {
-      "email": "exemplo@mail.com",
-      "username": "exemplo",
-      "password": "1234",
+      "Email": "musicas-buscas",
+      "musicas": [
+        "Happy",
+        "Dance",
+        "Party"
+      ],
+      "id": "0001"
+    },
+    {
+      "Email": "exemplo@mail.com",
+      "Username": "exemplo",
+      "Password": "1234",
       "DataNasc": "01/01/1901",
-      "genero": "nãoAPlica",
+      "Genero": "nãoAPlica",
       "PlayLists": [],
       "id": "0dT1CX"
     },
@@ -26,7 +86,16 @@
       "Password": "1234",
       "DataNasc": "2022-10-20",
       "Genero": "Masculino",
-      "PlayLists": [],
+      "PlayLists": [
+        {
+          "id": "Sun Oct 23 2022 15:51:49 GMT-0300 (Horário Padrão de Brasília)",
+          "nome": "Dance",
+          "imagem": "padrao",
+          "musicas": [
+            "Dance"
+          ]
+        }
+      ],
       "id": "0dTXgyt"
     },
     {
@@ -40,7 +109,7 @@
     },
     {
       "Email": "novo@novo.com",
-      "Username": "oi",
+      "Username": "Novo Perfil",
       "Password": "1234",
       "DataNasc": "2022-10-20",
       "Genero": "NaoBinario",
@@ -49,14 +118,62 @@
     },
     {
       "Email": "Gilberto@mail.com",
-      "Username": "Gilberto",
+      "Username": "Gilberto Neto",
       "Password": "1234",
       "DataNasc": "2022-11-02",
       "Genero": "Masculino",
       "PlayLists": [
-        "{ id: '01', nome: 'Sertanejo Universitário', imagem: 'sertanejo', musicas: [[Happy, 'Happy'], [Party, 'Party'], [Dance, 'Dance']] }"
+        {
+          "id": "05",
+          "nome": "Pagode",
+          "imagem": "pagode",
+          "musicas": [
+            "Happy",
+            "Dance"
+          ]
+        },
+        {
+          "id": "Sun Oct 23 2022 15:40:06 GMT-0300 (Horário Padrão de Brasília)",
+          "nome": "Party",
+          "imagem": "padrao",
+          "musicas": [
+            "Party"
+          ]
+        },
+        {
+          "id": "Sun Oct 23 2022 15:48:07 GMT-0300 (Horário Padrão de Brasília)",
+          "nome": "Dance",
+          "imagem": "padrao",
+          "musicas": [
+            "Dance"
+          ]
+        },
+        {
+          "id": "Sun Oct 23 2022 15:50:18 GMT-0300 (Horário Padrão de Brasília)",
+          "nome": "Happy",
+          "imagem": "padrao",
+          "musicas": [
+            "Happy"
+          ]
+        },
+        {
+          "id": "Sun Oct 23 2022 16:08:46 GMT-0300 (Horário Padrão de Brasília)",
+          "nome": "Dance",
+          "imagem": "padrao",
+          "musicas": [
+            "Dance"
+          ]
+        },
+        {
+          "id": "Sun Oct 23 2022 16:19:03 GMT-0300 (Horário Padrão de Brasília)",
+          "nome": "Dance",
+          "imagem": "padrao",
+          "musicas": [
+            "Dance"
+          ]
+        }
       ],
-      "id": "8y2nJs3"
+      "id": "anSAVuC"
     }
   ]
 }

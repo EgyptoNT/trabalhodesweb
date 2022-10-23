@@ -9,6 +9,7 @@ import rock from '../asstes/rock.jpg'
 import forro from '../asstes/forro.jpg'
 import samba from '../asstes/samba.jpg'
 import sertanejo from '../asstes/sertanejo.jpg'
+import padrao from '../asstes/padrao.png'
 import { FaPlayCircle } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom';
 //FaPlayCircle
@@ -45,6 +46,9 @@ function Cards(props) {
     }
     if(props.lista.imagem == 'rock'){
       return rock
+    }
+    if(props.lista.imagem == 'padrao'){
+      return padrao
     }
 
   }
